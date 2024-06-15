@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Add your custom CSS styles here */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  font-family: "Exo 2",sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  
+}
+ul {
+  list-style: none;
+}
+header nav ul li:hover a {
+  transition: 0.15s;
+  color: #f27405;
+}
+.active {
+  color: #0043f1 !important;
+}
+/* .hide {
+  transform: scaley(0);
+  opacity: 0;
+  transition: 0.4s;
+  transform-origin: top left;
+  height: 0;
+} */
+.show {
+  animation: drop-down .4s linear forwards;
+}
+.hide {
+  animation: drop-up .4s linear forwards;
+}
+@keyframes drop-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    margin-top: -100%;
+    transform-origin: top left;
+    transform: scaley(0) translatey(-100%);
+    opacity: 0;
+  }
+}
+@keyframes drop-down {
+  0% {
+    height: 0;
+    /* margin-top: -10%; */
+    /* transform-origin: top center; */
+    /* transform: scaley(1) translatey(-100%); */
+    /* z-index: -1; */
+  }
+  100% {
+    /* margin-top: 0; */
+    /* transform: scaley(1) translatey(0); */
+    /* opacity: 1; */
+    height: 100%;
+    transition: height 0.4s;
+  }
+}
+/* #######################################################################3 */
+.book .container .content {
+  background-image: url("https://skailinepartners.com/wp-content/uploads/2024/04/book-a-call.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.our-star {
+  background-image: url("https://skailinepartners.com/wp-content/themes/sk-ai-line-theme/src/sass/assets/images/mobile-rocket.svg");
+  background-position: center bottom;
+  background-size: 100% !important;
+  background-repeat: no-repeat;
+}
+@media (min-width:768px) {
+  .our-star {
+    background-image: url("https://skailinepartners.com/wp-content/themes/sk-ai-line-theme/src/sass/assets/images/ROCKET-1.webp");
+    background-size: contain !important;
+    background-color: #e6ebf7;
+  }
+}
+.methology .text h6::after,
+.our-star .text h6::after,
+.section-name h6::after,
+.cases  h6::after,
+.section-1  h6::after, 
+.about-page .section-name span::after,
+.services .engagement h6::after,
+.heading-section h6::after{
+content: "";
+position: absolute;
+top: 12px;
+right: 15px;
+height: 15px;
+border-right: 5px solid #0043f1;
+z-index: 99;
+}
+.section-1  h6::after,
+.heading-section h6::after,
+.section-name h6::after,
+.services .engagement h6::after{
+  right: 20px !important;
+  }
+@media (max-width: 1199px) and (min-width: 992px) {
+  .our-star .text h2 {
+    padding-right: 4rem;
+  }
+}
+.about-page .mission ul li::before,
+.about-page .global ul li::before,
+.serv ul li::before,
+.services .engagement ul li::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  top: 3.5%;
+  background-color: #f27405;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 14px;
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  }
+  .services .engagement ul li::before {
+    top: 5.5% !important;
+  }
+.cases {
+  background-image: url("https://skailinepartners.com/wp-content/uploads/2024/04/bg_01-_1_.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.cases::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(7, 33, 56, .7);
+  position: absolute;
+  z-index: 0;
+}
+.cases .img::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 67, 241, .03) 17.88%, rgba(0, 39, 139, .6) 100%);
+  z-index: 100;
+}
+.cases .img:hover img {
+  transform: scale(1.1);
+  transition: 0.5s ease all;
+}
+.image-leave {
+  transform: scale(1);
+  transition: 0.5s ease all;
+}
+main {
+  overflow: hidden;
+}
+.hero-section .video {
+  /* transform: matrix(1.00785, 0 ,0 , 1.0078, 0 ,2 ); */
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(10,30,100,0.62);
+}
+.features .section-2 hr,
+.features .section-2 .nav-link {
+  display: none;
+}
+.features .section-2 p {
+  min-height: auto !important;
+  }
+  @media (min-width:768px) {
+    .features .section-2 .box {
+      width: 50% !important;
+      text-align: center !important;
+    }
+    .features .section-2 .box .image {
+      justify-content: center !important;
+    }
+}
+ .heading {
+  background-image: url("https://skailinepartners.com/wp-content/uploads/2024/04/bg_01-_1_.webp");
+}
+.about-page .heading::before,
+.services .heading::before,
+.careers .heading::before,
+.contact-section .heading::before,
+.contact-section .contact-form::before,
+.about-page .global::before,
+.services .engagement::before,
+.heading.return::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(7, 33, 56, .7);
+  position: absolute;
+  z-index: 0;
+}
+.about-page .mission .image::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 67, 241, .03) 17.88%, rgba(0, 39, 139, .6) 100%);
+  z-index: 99;
+  border-radius: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+}
+.about-page .global,
+.services .engagement,
+.contact-section .contact-form {
+  background-image: url("https://skailinepartners.com/wp-content/uploads/2024/04/bg_01-_1_.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.about-page .team .image img {
+  transform: scale(1);
+  transition: 0.4s;
+}
+.about-page .team  .person:hover > .image > img {
+  transform: scale(1.1);
+  transition: 0.4s;
+  }
+  .about-page .team  .person:hover > .text {
+    top: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: end;
+    transition: all 0.4s;
+  }
+  .about-page .team  .person:hover .text > .hidden-box {
+    opacity: 1;
+    /* height: a\; */
+    transition: 1.5s;
+  }
+  .about-page .team  .person:hover .text > .hidden-box > * {
+    display: block;
+    transition: display 0.4s 0.4s;
+  }
+  .about-page .team  .person:hover .text > .hidden-box:first-child {
+    animation: hide 0.4s ;
+  }
+  @keyframes hide {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  .about-page .team  .person .hidden-box {
+    transition: 1.5s;
+    /* height: 0; */
+  } 
+  .about-page .team .person::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 67, 241, .03) 17.88%, rgba(0, 39, 139, .6) 100%);
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 1s;
+    border-radius: 16px;
+  }
+.about-page .team .person:hover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 67, 241, .4) 17.88%, #00278b 100%);
+  z-index: 1;
+  border-radius: 16px;
+  transition: 0.1s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+} 
+.calender {
+  background-image: url("https://skailinepartners.com/wp-content/themes/sk-ai-line-theme/src/sass/assets/icons/calendar.svg");
+  background-size: cover;
+}
+.recent .info h2::after {
+  position: absolute;
+  content: "";
+  margin-top: 20px;
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #0043f1;
+}
+.recent .case:last-child {
+  border-bottom: none !important;
+}
+.case-info img,
+.contact-section .book,
+.contact-section .book .container,
+.all-case-description img {
+  transition: .4s;
+}
+.contact-section .book .container:hover {
+  box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
+  border: white;
+}
+ /* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+footer .box2 h3::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 2.5px;
+  margin-top: 16.5px !important;
+  margin-top: 1rem;
+  background-color: #0043f1;
+}
+@media (min-width:1320px) {
+  footer .box2 h3::after {
+    margin-top: 16px !important;
+    height: 2.5px;
+  }
+}
+footer .box2 ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url("./assets/arrow-footer.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+footer .box2 ul li a:hover {
+  color: #f27405;
+}
+@media (min-width:768px) and (max-width:991px) {
+  footer .box3 form input::placeholder {
+    font-size: 13px;
+    color: #59799a;
+    font-weight: 400;
+  }
+}
+@media (min-width:1200px) and (max-width:1400px) {
+  footer .box1 h3 {
+    padding-right: 2.1rem;
+  }
+}
+@media (min-width:1400px) {
+  footer .box1 h3 {
+    padding-right: 5.4rem;
+  }
+}
